@@ -24,10 +24,7 @@ where
     } else {
         provider.get_block_number().await.wrap_err("Failed to get latest block number")?.as_u64()
     };
-    let (fork_gas_price, rpc_chain_id, block) = tokio::try_join!(
-        provider
-            .get_gas_price()
-            .map_err(|err| { eyre::Error::new(err).wrap_err("Failed to get gas price") }),
+    let (rpc_chain_id, block) = tokio::try_join!(
         provider
             .get_chainid()
             .map_err(|err| { eyre::Error::new(err).wrap_err("Failed to get chain id") }),
@@ -65,7 +62,7 @@ where
         },
         tx: TxEnv {
             caller: origin,
-            gas_price: gas_price.map(U256::from).unwrap_or(fork_gas_price),
+            gas_price: gas_price.map(U256::from).unwrap(),
             chain_id: Some(override_chain_id.unwrap_or(rpc_chain_id.as_u64())),
             gas_limit: block.gas_limit.as_u64(),
             ..Default::default()
