@@ -7,12 +7,12 @@ readme = "README.md"
 repository = "https://github.com/foundry-rs/foundry"
 
 [dependencies]
-ethers-core = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
-ethers-contract = { git = "https://github.com/gakonst/ethers-rs", default-features = false, features = ["abigen"] }
-ethers-etherscan = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
-ethers-addressbook = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
-ethers-providers = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
-ethers-solc = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
+ethers-core = { git = "https://github.com/gakonst/ethers-rs", default-features = false, rev="c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24"}
+ethers-contract = { git = "https://github.com/gakonst/ethers-rs", default-features = false, features = ["abigen"] , rev="c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24"}
+ethers-etherscan = { git = "https://github.com/gakonst/ethers-rs", default-features = false , rev="c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24"}
+ethers-addressbook = { git = "https://github.com/gakonst/ethers-rs", default-features = false , rev="c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24"}
+ethers-providers = { git = "https://github.com/gakonst/ethers-rs", default-features = false , rev="c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24"}
+ethers-solc = { git = "https://github.com/gakonst/ethers-rs", default-features = false , rev="c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24"}
 tracing-subscriber = { version = "0.3", default-features = false, features = ["env-filter", "fmt"], optional = true }
 
 forge-fmt = { path = "../fmt" }
@@ -32,7 +32,7 @@ rand = "0.8"
 
 [dev-dependencies]
 foundry-common = {path = "./../common"}
-ethers = { git = "https://github.com/gakonst/ethers-rs", default-features = false, features = ["solc-full"] }
+ethers = { git = "https://github.com/gakonst/ethers-rs", default-features = false, features = ["solc-full"] , rev="c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24"}
 
 
 [features]

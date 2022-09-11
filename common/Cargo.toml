@@ -14,9 +14,9 @@ repository = "https://github.com/foundry-rs/foundry"
 foundry-config = { path = "../config" }
 
 # eth
-ethers-core = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
-ethers-solc = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
-ethers-providers = { git = "https://github.com/gakonst/ethers-rs", default-features = false }
+ethers-core = { git = "https://github.com/gakonst/ethers-rs", default-features = false, rev = "c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24" }
+ethers-solc = { git = "https://github.com/gakonst/ethers-rs", default-features = false, rev = "c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24" }
+ethers-providers = { git = "https://github.com/gakonst/ethers-rs", default-features = false, rev = "c341f31fc4512cbf82edf3fdc3fd1b1f0c823b24" }
 
 # io
 reqwest = { version = "0.11", default-features = false }
